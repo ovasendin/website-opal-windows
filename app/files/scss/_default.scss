@@ -1,0 +1,158 @@
+@import 'design';
+
+$font: sans-serif;
+$size: 16px;
+$width: 1480px;
+$padding: 0 40px;
+$offset: 50px;
+
+%flexbox {
+  display: flex;
+}
+%column {
+  flex-direction: column;
+}
+%row {
+  flex-direction: row;
+}
+%grow {
+  flex-grow: 1;
+}
+%shrink {
+  flex-shrink: 0;
+}
+%icon-scale {
+  transform: scale(0.9);
+}
+%button-scale {
+  transform: scale(0.98);
+}
+%shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+@mixin shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+@mixin icon-scale {
+  transform: scale(0.9);
+}
+@mixin flexbox {
+  display: flex;
+}
+@mixin column {
+  flex-direction: column;
+}
+@mixin row {
+  flex-direction: row;
+}
+@mixin grow {
+  flex-grow: 1;
+}
+@mixin shrink {
+  flex-shrink: 0;
+}
+%none {
+  display: none;
+}
+%transition {
+  transition: 0.2s;
+}
+
+// Styles
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  font-family: $font;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $size;
+  color: $fontDefault;
+  min-height: 100vh;
+}
+.page {
+  @extend %flexbox;
+  @extend %column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $width;
+  padding: $padding;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-position: inside;
+}
+button {
+  background-color: transparent;
+  font-family: $font;
+  font-size: $size;
+  border: 0;
+  cursor: pointer;
+}
+input {
+  font-family: $font;
+  border: 0;
+}
+:active,
+:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-family: $font;
+  color: $fontGreyInput;
+  font-size: $size - 2;
+  font-weight: normal;
+  opacity: 1;
+}
+::-moz-placeholder {
+  font-family: $font;
+  color: $fontGreyInput;
+  font-size: $size - 2;
+  font-weight: normal;
+  opacity: 1;
+}
+:-moz-placeholder {
+  font-family: $font;
+  color: $fontGreyInput;
+  font-size: $size - 2;
+  font-weight: normal;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  font-family: $font;
+  color: $fontGreyInput;
+  font-size: $size - 2;
+  font-weight: normal;
+  opacity: 1;
+}
+
+// overlay
+.overlay {
+  @extend %transition;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
