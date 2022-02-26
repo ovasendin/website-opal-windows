@@ -3,5 +3,284 @@
 
 // CSS
 
+h2 {
+  color: $secondInfo;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+//////////////////////////
+// BANNER
+
+.banner {
+  @extend %flexbox;
+  position: relative;
+  width: 100%;
+  background-image: url('../images/banner.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+//////////////////////////
+// HEADER
+
+.header {
+  @extend %flexbox;
+  padding: 30px 0;
+}
+.header__logo {
+  @extend %flexbox;
+  @extend %shrink;
+}
+.svg-logo {
+  width: 150px;
+  height: 85px;
+  margin: auto 0;
+}
+
+// contacts
+
+.contacts {
+  @extend %flexbox;
+  @extend %grow;
+}
+.contacts__list {
+  @extend %flexbox;
+  @extend %grow;
+  margin: auto 0;
+  justify-content: center;
+}
+.footer__contacts {
+  &.contacts__list {
+    justify-content: end;
+  }
+  .contacts__item {
+    color: #fff;
+  }
+  .contacts__link {
+    color: #fff;
+  }
+}
+.contacts__item {
+  @extend %flexbox;
+  color: $bannerText;
+  list-style-type: none;
+  font-size: 18px;
+  padding: 0 25px;
+}
+.contacts__name {
+  margin: auto 10px auto 0;
+}
+.contacts__link {
+  color: $bannerText;
+  line-height: 18px;
+  margin: auto 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//////////////////////////
+// banner__info
+
+.banner__info {
+  @extend %flexbox;
+  @extend %column;
+  padding: 90px 0 180px;
+}
+.banner__h1 {
+  color: $contrastBlue;
+  font-family: $fontCondensed;
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.banner__desc {
+  color: $bannerText;
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 680px;
+}
+
+//////////////////////////
+// instructions
+
+.instructions__wrapper {
+  @extend %flexbox;
+  @extend %column;
+  padding: 80px 0;
+}
+.instructions__attention {
+  @extend %flexbox;
+  margin-bottom: 40px;
+}
+.attention__icon {
+  @extend %flexbox;
+  width: 60px;
+  height: 60px;
+  margin: auto 0;
+  border-radius: 6px;
+  background-color: $contrastBlue;
+  margin-right: 30px;
+  padding: 10px;
+}
+.svg-attention {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+.attention__text {
+  font-size: 20px;
+  line-height: 28px;
+
+  b {
+    font-weight: 500;
+    color: $contrastBlue;
+  }
+}
+
+// instructions__list
+
+.instructions__list {
+  @extend %flexbox;
+  @extend %column;
+  padding-top: 20px;
+}
+.instructions__item {
+  @extend %flexbox;
+  background-color: $bgBlueLight;
+  border-color: $borderBlueLight;
+  padding: 45px 50px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+.instructions__text {
+  @extend %grow;
+  max-width: 60%;
+  width: 100%;
+  padding-right: 30px;
+
+  ul {
+    margin-left: 20px;
+  }
+  li {
+    color: $fontListDefault;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 14px;
+    list-style-position: outside;
+  }
+}
+.instructions__gallery {
+  @extend %flexbox;
+  @extend %shrink;
+}
+.gallery__item {
+  @extend %flexbox;
+  position: relative;
+  padding: 0 10px;
+  overflow: hidden;
+
+  &:active {
+    svg {
+      transform: scale(0.9);
+    }
+  }
+}
+.gallery__link {
+  @extend %flexbox;
+
+  img {
+    width: 212px;
+    height: 290px;
+    transition: 0.4s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+.svg-search {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  pointer-events: none;
+}
+
+//////////////////////////
+// LET'S START
+
+.start {
+  padding: 60px 0;
+  background: $orangeStart;
+  background: linear-gradient(135deg, $orangeFinish 0%, $orangeStart 100%);
+}
+.start__title {
+  color: #fff;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 500;
+}
+
+//////////////////////////
+// MAIN FORM
+
+.form {
+  padding: 80px 0;
+}
+
+//////////////////////////
+// MAIN FORM - client
+
+
+
+
+
+//////////////////////////
+// FOOTER
+
+.footer {
+  background: $blueStart;
+  background: linear-gradient(135deg, $blueStart 0%, $blueFinish 100%);
+}
+.footer__wrapper {
+  @extend %flexbox;
+  padding: 50px 0;
+}
+
+//////////////////////////
 // @media [bottom]
 @import 'media';

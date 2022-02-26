@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <!--favicon-->
     <link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon" />
@@ -36,17 +36,21 @@
 
             <!-- contacts -->
             <div class="contacts">
+              <!-- mobile contacts -->
+              <!-- here -->
+
+              <!-- contacts__list -->
               <ul class="contacts__list">
                 <li class="contacts__item">
                   <span class="contacts__name">Naperville:</span>
-                  <a href="" class="contacts__link">630-355-6557</a>
+                  <a href="tel:+16303556557" class="contacts__link">630-355-6557</a>
                 </li>
                 <li class="contacts__item">
                   <span class="contacts__name">Des Plaines:</span>
-                  <a href="" class="contacts__link">847-380-8868</a>
+                  <a href="tel:+18473808868" class="contacts__link">847-380-8868</a>
                 </li>
                 <li class="contacts__item">
-                  <a href="" class="contacts__link">info@opalenterprises.net</a>
+                  <a href="https://opalexteriors.com" class="contacts__link" target="_blank">opalexteriors.com</a>
                 </li>
               </ul>
             </div>
@@ -64,97 +68,114 @@
       <!-- INSTRUCTIONS -->
       <section class="instructions">
         <div class="container">
+          <div class="instructions__wrapper">
 
-          <h2>Measuring Instructions</h2>
+            <h2>Measuring Instructions</h2>
 
-          <!-- attention -->
-          <div class="instructions__attention">
-            <div class="attention__icon">
-              <svg class="svg-attention" role="img" title="Attention">
-                <use xlink:href="files/images/sprite.svg#attention"></use>
-              </svg>
-            </div>
-            <div class="attention__text">
-              Please do your best and remember these <b>measurements do not have to be perfect</b><br/> 
-              It is simply helping you get your rough estimate quicker and budget to speed up this overall process for you.
-            </br>
-          </div>
-
-          <!-- instructions list -->
-          <div class="instructions__list">
-
-            <!-- windows -->
-            <div class="instructions__item">
-              <div class="instructions__text">
-                <h3>Windows</h3>
-                <ul>
-                  <li>Please take your tape measure and follow the photo instructions.</li>
-                  <li>Place your tape measure on one side of the window trim/casing, and draw it across the width of the window to the opposite side trim/casing. This is your WIDTH. </li>
-                  <li>Follow the same steps from top to bottom, and this is your HEIGHT.</li>
-                </ul>
+            <!-- attention -->
+            <div class="instructions__attention">
+              <div class="attention__icon">
+                <svg class="svg-attention" role="img" title="Attention">
+                  <use xlink:href="files/images/sprite.svg#attention"></use>
+                </svg>
               </div>
-              <div class="instructions__gallery">
-                <div class="gallery__item">
-                  <img src="./files/images/instructions/windows1.jpg" alt="How to measure window width">
-                  <svg class="svg-search" role="img" title="Zoom">
-                    <use xlink:href="files/images/sprite.svg#search"></use>
-                  </svg>
-                </div>
-                <div class="gallery__item">
-                  <img src="./files/images/instructions/windows2.jpg" alt="How to measure window height">
-                  <svg class="svg-search" role="img" title="Zoom">
-                    <use xlink:href="files/images/sprite.svg#search"></use>
-                  </svg>
-                </div>
+              <div class="attention__text">
+                Please do your best and remember these <b>measurements do not have to be perfect</b><br/> 
+                It is simply helping you get your rough estimate quicker and budget to speed up this overall process for you.
+                </br>
               </div>
             </div>
-            <!-- /instructions__item -->
 
-            <!-- doors -->
-            <div class="instructions__item">
-              <div class="instructions__text">
-                <h3>Doors</h3>
-                <ul>
-                  <li>Please take your tape measure and follow the photo instructions.</li>
-                  <li>Place your tape measure on one side of the door's trim/casing, and draw it across the width of the door to the opposite side trim/casing. This is your WIDTH.</li>
-                  <li>Draw your tape measure from the top of the door's trim/casing, and pull it down to the bottom of your floor. This is your HEIGHT.</li>
-                </ul>
-              </div>
-              <div class="instructions__gallery">
-                <div class="gallery__item">
-                  <img src="./files/images/instructions/doors1.jpg" alt="How to measure door width">
-                  <svg class="svg-search" role="img" title="Zoom">
-                    <use xlink:href="files/images/sprite.svg#search"></use>
-                  </svg>
-                </div>
-                <div class="gallery__item">
-                  <img src="./files/images/instructions/doors2.jpg" alt="How to measure door height">
-                  <svg class="svg-search" role="img" title="Zoom">
-                    <use xlink:href="files/images/sprite.svg#search"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <!-- /instructions__item -->
+            <!-- instructions list -->
+            <div class="instructions__list">
 
-            <!-- house -->
-            <div class="instructions__item">
-              <div class="instructions__text">
-                <h3>Outside of the house</h3>
-                <ul>
-                  <li>Please take 1 photo of each elevation of your home (front, left, right, back) with the entire side of the home in camera view. It is optional, but encouraged.</li>
-                </ul>
+              <!-- windows -->
+              <div class="instructions__item">
+                <div class="instructions__text">
+                  <h3>Windows</h3>
+                  <ul>
+                    <li>Please take your tape measure and follow the photo instructions.</li>
+                    <li>Place your tape measure on one side of the window trim/casing, and draw it across the width of the window to the opposite side trim/casing. This is your WIDTH. </li>
+                    <li>Follow the same steps from top to bottom, and this is your HEIGHT.</li>
+                  </ul>
+                </div>
+                <div class="instructions__gallery">
+                  <div class="gallery__item first-window">
+                    <a href="./files/images/instructions/large/windows1.png" class="gallery__link" data-fancybox="windows">
+                      <img src="./files/images/instructions/windows1.png" alt="How to measure window width">
+                    </a>
+
+                    <svg class="svg-search" role="img" title="Zoom">
+                      <use xlink:href="files/images/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="./files/images/instructions/large/windows2.png" class="gallery__link" data-fancybox="windows">
+                      <img src="./files/images/instructions/windows2.png" alt="How to measure window height">
+                    </a>
+                    
+                    <svg class="svg-search" role="img" title="Zoom">
+                      <use xlink:href="files/images/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              <!-- /instructions__item -->
+
+              <!-- doors -->
+              <div class="instructions__item">
+                <div class="instructions__text">
+                  <h3>Doors</h3>
+                  <ul>
+                    <li>Please take your tape measure and follow the photo instructions.</li>
+                    <li>Place your tape measure on one side of the door's trim/casing, and draw it across the width of the door to the opposite side trim/casing. This is your WIDTH.</li>
+                    <li>Draw your tape measure from the top of the door's trim/casing, and pull it down to the bottom of your floor. This is your HEIGHT.</li>
+                  </ul>
+                </div>
+                <div class="instructions__gallery">
+                  <div class="gallery__item">
+                    <a href="./files/images/instructions/large/doors1.png" class="gallery__link" data-fancybox="doors">
+                      <img src="./files/images/instructions/doors1.png" alt="How to measure door width" >
+                    </a>
+
+                    <svg class="svg-search" role="img" title="Zoom">
+                      <use xlink:href="files/images/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                  <div class="gallery__item">
+                    <a href="./files/images/instructions/large/doors2.png" class="gallery__link" data-fancybox="doors">
+                      <img src="./files/images/instructions/doors2.png" alt="How to measure door height" >
+                    </a>
+
+                    <svg class="svg-search" role="img" title="Zoom">
+                      <use xlink:href="files/images/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- /instructions__item -->
+
+              <!-- house -->
+              <div class="instructions__item">
+                <div class="instructions__text">
+                  <h3>Outside of the house</h3>
+                  <ul>
+                    <li>Please take 1 photo of each elevation of your home (front, left, right, back) with the entire side of the home in camera view. It is optional, but encouraged.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /instructions__item -->
             </div>
-            <!-- /instructions__item -->
-          </div>
-          <!-- /instructions__list -->
+            <!-- /instructions__list -->
+
         </div>
       </section>
 
       <!-- LET'S START -->
       <div class="start">
-        <span class="start__title">So, let`s start ;)</span>
+        <div class="container">
+          <span class="start__title">So, let`s start ;)</span>
+        </div>
       </div>
 
       <!-- MAIN FORM -->
@@ -350,29 +371,31 @@
       <footer class="footer">
         <div class="container">
 
-          <div class="logo footer__logo">
-            <svg class="svg-logo" role="img" title="OPAL logotype">
-              <use xlink:href="files/images/sprite.svg#logo"></use>
-            </svg>
-          </div>
-
-          <div class="contacts footer__contacts">
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <span class="contacts__name">Naperville:</span>
-                <a href="" class="contacts__link">630-355-6557</a>
-              </li>
-              <li class="contacts__item">
-                <span class="contacts__name">Des Plaines:</span>
-                <a href="" class="contacts__link">847-380-8868</a>
-              </li>
-              <li class="contacts__item">
-                <a href="" class="contacts__link">info@opalenterprises.net</a>
-              </li>
-              <li class="contacts__item">
-                <a href="" class="contacts__link">Privacy Policy</a>
-              </li>
-            </ul>
+          <div class="footer__wrapper">
+            <div class="logo footer__logo">
+              <svg class="svg-logo" role="img" title="OPAL logotype">
+                <use xlink:href="files/images/sprite.svg#logo_white"></use>
+              </svg>
+            </div>
+  
+            <div class="contacts">
+              <ul class="contacts__list footer__contacts">
+                <li class="contacts__item">
+                  <span class="contacts__name">Naperville:</span>
+                  <a href="" class="contacts__link">630-355-6557</a>
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__name">Des Plaines:</span>
+                  <a href="" class="contacts__link">847-380-8868</a>
+                </li>
+                <li class="contacts__item">
+                  <a href="" class="contacts__link">info@opalenterprises.net</a>
+                </li>
+                <li class="contacts__item">
+                  <a href="https://www.opalexteriors.com/privacy-policy/" class="contacts__link" target="_blank">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </div>

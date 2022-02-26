@@ -52,7 +52,7 @@ function pluginsCSS() {
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',
+    // 'node_modules/jquery/dist/jquery.js',
     'app/files/js/components/**/*.js',
     'app/files/plugins/**/*.js',
     'app/files/js/main.js',

@@ -1,6 +1,10 @@
-/*! main.js */
+// DOMContentLoaded
 
-$(document).ready(function () {
-  // svg4everybody
-  svg4everybody({})
+document.addEventListener('DOMContentLoaded', e => {
+  svg4everybody()
+
+  // fancybox
+  Fancybox.bind("[data-fancybox]", {
+    // Your options go here
+  });
 })
