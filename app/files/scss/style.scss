@@ -16,6 +16,19 @@ h3 {
   font-weight: 500;
   margin-bottom: 30px;
 }
+ul {
+  margin-left: 20px;
+}
+li {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 14px;
+  list-style-position: outside;
+}
+b {
+  font-weight: 500;
+  color: $contrastBlue;
+}
 
 //////////////////////////
 // BANNER
@@ -155,11 +168,6 @@ h3 {
 .attention__text {
   font-size: 20px;
   line-height: 28px;
-
-  b {
-    font-weight: 500;
-    color: $contrastBlue;
-  }
 }
 
 // instructions__list
@@ -172,7 +180,7 @@ h3 {
 .instructions__item {
   @extend %flexbox;
   background-color: $bgBlueLight;
-  border-color: $borderBlueLight;
+  border: 1px solid $borderBlueLight;
   padding: 45px 50px;
   border-radius: 12px;
   margin-bottom: 40px;
@@ -187,15 +195,8 @@ h3 {
   width: 100%;
   padding-right: 30px;
 
-  ul {
-    margin-left: 20px;
-  }
   li {
     color: $fontListDefault;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 14px;
-    list-style-position: outside;
   }
 }
 .instructions__gallery {
@@ -263,8 +264,148 @@ h3 {
 }
 
 //////////////////////////
-// MAIN FORM - client
+// CLIENT FORM
 
+.client__form {
+  @extend %flexbox;
+  @extend %column;
+}
+.form__description {
+  color: $formDesc;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+.form__wrapper {
+  @extend %flexbox;
+  @extend %column;
+}
+.form__row {
+  @extend %flexbox;
+  margin-bottom: 50px;
+
+  &.row__images {
+    @extend %column;
+
+    h4 {
+      color: $secondInfo;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+  }
+  &.row__inputs {
+    .fieldset {
+      width: 50%;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+// form
+
+.fieldset {
+  @extend %flexbox;
+  @extend %column;
+  border: 0;
+}
+.label {
+  @extend %flexbox;
+  @extend %column;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+.label__textarea {
+  height: 100%;
+}
+.input {
+  font-family: $font;
+  color: $fontDefault;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 18px 20px 16px;
+  border: 1px solid $inputBorder;
+  border-radius: 5px;
+}
+.textarea {
+  font-family: $font;
+  color: $fontDefault;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 20px;
+  border: 1px solid $inputBorder;
+  border-radius: 5px;
+  height: 100%;
+}
+.input__title {
+  @extend %flexbox;
+  color: $secondInfo;
+  font-size: 15px;
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  padding: 0 8px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+//////////////////////////
+// FORM INSTRUCTIONS
+
+.form-instructions {
+  position: relative;
+  color: #fff;
+  padding: 45px 50px;
+  border-radius: 10px;
+  background: $blueStart;
+  background: linear-gradient(135deg, $blueStart 0%, $blueFinish 100%);
+  margin-bottom: 60px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background-image: url('./../images/logo-instructions.png');
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+  li {
+    max-width: 70%;
+  }
+}
+
+//////////////////////////
+// WINDOW FORM
+
+.window__form {
+  @extend %flexbox;
+  @extend %column;
+}
+.svg-width {
+  fill: $fontDefault;
+  width: 25px;
+  height: 10px;
+  margin: auto 5px auto 0;
+}
+.svg-height {
+  fill: $fontDefault;
+  width: 20px;
+  height: 20px;
+  margin: auto 5px auto 0;
+  transform: rotate(90deg);
+}
 
 
 

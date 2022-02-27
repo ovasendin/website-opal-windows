@@ -110,32 +110,37 @@ input {
 :focus {
   outline: none;
 }
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px $bgBlueLight !important; // фор
+  -webkit-text-fill-color: $fontDefault !important; // текст
+  color: $fontDefault !important; // текст
+}
 
 ::-webkit-input-placeholder {
   font-family: $font;
   color: $fontGreyInput;
-  font-size: $size - 2;
+  font-size: 18px;
   font-weight: normal;
   opacity: 1;
 }
 ::-moz-placeholder {
   font-family: $font;
   color: $fontGreyInput;
-  font-size: $size - 2;
+  font-size: 18px;
   font-weight: normal;
   opacity: 1;
 }
 :-moz-placeholder {
   font-family: $font;
   color: $fontGreyInput;
-  font-size: $size - 2;
+  font-size: 18px;
   font-weight: normal;
   opacity: 1;
 }
 :-ms-input-placeholder {
   font-family: $font;
   color: $fontGreyInput;
-  font-size: $size - 2;
+  font-size: 18px;
   font-weight: normal;
   opacity: 1;
 }

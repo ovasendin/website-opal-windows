@@ -179,10 +179,7 @@
       </div>
 
       <!-- MAIN FORM -->
-      <form action="" class="form" name="main">
-
-        <!-- CLIENT -->
-        <section class="client">
+      <form action="" class="form" name="main" method="post" enctype="multipart/form-data">
           <div class="container">
   
             <h2>Your Contact Information</h2>
@@ -193,7 +190,7 @@
 
               <div class="form__wrapper">
                 <!-- row -->
-                <div class="form__row">
+                <div class="form__row row__inputs">
                   <fieldset class="fieldset">
                     <label class="label">
                       <span class="input__title">First name*</span>
@@ -209,34 +206,31 @@
                     </label>
                   </fieldset>
                   <fieldset class="fieldset">
-                    <label class="label">
-                      <span class="input__title">First name*</span>
-                      <textarea class="textarea" name="client__comment" rows="4"></textarea>
-                      <svg class="svg-edit" role="img" title="Leave comment">
-                        <use xlink:href="files/images/sprite.svg#edit"></use>
-                      </svg>
+                    <label class="label label__textarea">
+                      <span class="input__title">Your comments</span>
+                      <textarea class="textarea" name="client__comment" rows="4" placeholder="Leave a comment"></textarea>
                     </label>
                   </fieldset>
                 </div>
 
                 <!-- row -->
-                <div class="form__row">
+                <div class="form__row row__images">
                   <h4>Upload optional photos of the outside of your home here</h4>
                   <fieldset class="fieldset">
                     <label class="label">
-                      <input class="input" type="file" name="house__front">
+                      <input class="input" type="file" name="house__front" accept="image/*">
                       <span class="input__title">Add photo of the front side of the house*</span>
                     </label>
                     <label class="label">
-                      <input class="input" type="file" name="house__back">
+                      <input class="input" type="file" name="house__back" accept="image/*">
                       <span class="input__title">Add photo of the back side of the house*</span>
                     </label>
                     <label class="label">
-                      <input class="input" type="file" name="house__left">
+                      <input class="input" type="file" name="house__left" accept="image/*">
                       <span class="input__title">Add photo of the left side of the house*</span>
                     </label>
                     <label class="label">
-                      <input class="input" type="file" name="house__right">
+                      <input class="input" type="file" name="house__right" accept="image/*">
                       <span class="input__title">Add photo of the right side of the house*</span>
                     </label>
                   </fieldset>
@@ -256,7 +250,7 @@
                 <li>After filling out the form, upload the photos related to this window/door. </li>
                 <li>To add an additional window or door with different dimensions, click on the "Add new window/door" button, and another form will appear. </li>
                 <li>You can add the name of the new room, photos, and window/door parameters to this form. </li>
-                <li>You can submit up to 15 different forms at one time...</li>
+                <li>You can submit up to 15 different forms at one time.</li>
               </ul>
             </section>
 
@@ -266,7 +260,7 @@
 
               <div class="form__wrapper">
                 <!-- row -->
-                <div class="form__row">
+                <div class="form__row row__inputs">
                   <fieldset class="fieldset">
                     <label class="label">
                       <span class="input__title">Room name*</span>
@@ -275,7 +269,7 @@
                     <label class="label">
                       <span class="input__title">
                         <svg class="svg-width" role="img" title="Width">
-                          <use xlink:href="files/images/sprite.svg#width"></use>
+                          <use xlink:href="files/images/sprite.svg#width_height"></use>
                         </svg>
                         Window width*
                       </span>
@@ -284,7 +278,7 @@
                     <label class="label">
                       <span class="input__title">
                         <svg class="svg-height" role="img" title="Height">
-                          <use xlink:href="files/images/sprite.svg#height"></use>
+                          <use xlink:href="files/images/sprite.svg#width_height"></use>
                         </svg>
                         Window height*
                       </span>
@@ -300,28 +294,24 @@
                     <label class="label">
                       <span class="input__title">Color of the outer frame*</span>
                       <input class="input" type="text" name="outher__color" placeholder="White">
-                      <svg class="svg-edit" role="img" title="Leave comment">
-                        <use xlink:href="files/images/sprite.svg#edit"></use>
-                      </svg>
                     </label>
                     <label class="label">
                         <!-- NUMNER INPUT -->
+                        <span class="input__title">NUMBER*</span>
+                      <input class="input" type="text" name="outher__color" placeholder="White">
                     </label>
-                    <label class="label">
+                    <label class="label label__textarea">
                       <span class="input__title">Your comments</span>
-                      <textarea class="textarea" name="window__comment" rows="4"></textarea>
-                      <svg class="svg-edit" role="img" title="Leave comment">
-                        <use xlink:href="files/images/sprite.svg#edit"></use>
-                      </svg>
+                      <textarea class="textarea" name="window__comment" rows="4" placeholder="Leave a comment"></textarea>
                     </label>
                   </fieldset>
                 </div>
 
                 <!-- row -->
-                <div class="form__row">
+                <div class="form__row row__images">
                   <fieldset class="fieldset">
                     <label class="label">
-                      <input class="input" type="file" name="house__front">
+                      <input class="input" type="file" name="house__front" accept="image/*">
                       <span class="input__title">Add an photo</span>
                     </label>
                   </fieldset>
@@ -361,8 +351,6 @@
             </div>
             <!-- /form__buttons -->
           </div>
-        </section>
-        <!-- /client -->
       </form>
       <!-- /contact form -->
       
