@@ -1,17 +1,409 @@
-@media screen and (max-width: 1440px) {
-  // 1320
+@media screen and (max-width: 1180px) {
+  // header
+  .contacts__list {
+    justify-content: flex-end;
+  }
+  .banner__info {
+    padding: 90px 0;
+
+    &.thanks {
+      padding: 90px 0;
+    }
+  }
+
+  // footer
+  .footer__contacts {
+    @include column;
+
+    .contacts__item {
+      font-size: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .contacts__item {
+    justify-content: flex-end;
+  }
 }
-@media screen and (max-width: 1200px) {
-  // 1140
+@media screen and (max-width: 1024px) {
+  // warranty
+  .warranty {
+    padding: 60px 0 50px;
+  }
+  .warranty__wrapper {
+    @include column;
+  }
+  .warranty__icons {
+    padding-top: 40px;
+  }
+  .warranty__icon {
+    padding-left: 0;
+    padding-right: 40px;
+    height: 160px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // reviews__list
+
+  .reviews__list {
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .reviews__item {
+    flex-direction: row;
+    background-color: $bgBlueLight;
+    border: 1px solid $borderBlueLight;
+    border-radius: 10px;
+    padding: 30px;
+    width: 48%;
+    margin: 1%;
+
+    svg {
+      margin: auto 0 auto 20px;
+
+      &.svg-bbb {
+        margin: auto 0 auto 20px;
+      }
+      &.svg-google {
+        height: 50px;
+      }
+    }
+  }
+  .reviews__rating {
+    font-size: 55px;
+    line-height: 55px;
+    margin: auto 0;
+  }
+
+  // .instructions__wrapper
+
+  .instructions__wrapper {
+    padding: 60px 0;
+  }
+  .instructions__item {
+    @include column;
+    padding: 40px;
+    margin-bottom: 30px;
+  }
+  .instructions__text {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .attention__icon {
+    margin: 0 30px 0 0;
+  }
+  .gallery__link {
+    img {
+      width: 160px;
+      height: auto;
+    }
+  }
+  .svg-search {
+    top: 185px;
+  }
+
+  // brands__list
+
+  .brands__list {
+    @include column;
+  }
+  .brand__item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  // ---
+
+  .form {
+    padding: 60px 0;
+  }
+  .reviews__wrapper {
+    padding: 60px 0;
+  }
+  .brands__wrapper {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 992px) {
-  // 960
+  // header
+
+  .header {
+    padding: 20px 0;
+  }
+  .contacts__list {
+    @include column;
+    padding: 10px 0;
+  }
+  .contacts__item {
+    font-size: 16px;
+    padding-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .banner
+
+  .banner {
+    &::before {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  .banner__info {
+    padding: 60px 0 90px;
+
+    &.thanks {
+      padding: 60px 0 80px;
+    }
+  }
+
+  // attention__text
+
+  .instructions__attention {
+    margin-bottom: 30px;
+  }
+  .attention__text {
+    br {
+      display: none;
+    }
+  }
+
+  // .instructions__wrapper
+
+  .instructions__wrapper {
+    padding-bottom: 40px;
+  }
+  .instructions__item {
+    margin-bottom: 20px;
+  }
+
+  // footer__wrapper
+
+  .footer__wrapper {
+    padding: 30px 0;
+  }
+  .form-instructions {
+    padding: 40px;
+
+    li {
+      max-width: 100%;
+    }
+    &::before {
+      display: none;
+    }
+  }
 }
-@media screen and (max-width: 768px) {
-  // 720
+@media screen and (max-width: 640px) {
+  // .container
+
+  .container {
+    padding: 0 30px;
+  }
+
+  // banner__h1
+
+  .banner__info {
+    padding-bottom: 60px;
+
+    &:not(.thanks) {
+      .banner__h1 {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // instructions__wrapper
+
+  .instructions__wrapper {
+    padding: 50px 0 40px;
+  }
+  .instructions__item {
+    padding: 30px;
+  }
+
+  // .start
+
+  .start {
+    padding: 50px 0 40px;
+  }
+
+  // .warranty
+
+  .warranty {
+    padding: 40px 0;
+  }
+  .warranty__text {
+    br {
+      display: none;
+    }
+  }
+
+  // form
+
+  .form-instructions {
+    padding: 30px;
+  }
+  .form__row {
+    &.row__inputs {
+      flex-wrap: wrap;
+
+      .fieldset {
+        width: 100%;
+
+        &:first-child {
+          padding: 0;
+        }
+        &:last-child {
+          padding: 0;
+        }
+      }
+      .label {
+        margin-bottom: 20px;
+      }
+      .label__textarea {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 @media screen and (max-width: 576px) {
-  // 540
+  // banner__h1
+
+  .banner__h1 {
+    br {
+      display: none;
+    }
+  }
+
+  // reviews__item
+
+  .reviews__item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  // header
+
+  .svg-logo {
+    width: 120px;
+    height: 68px;
+  }
+  .contacts__item {
+    margin-bottom: 5px;
+  }
+  .banner {
+    &::before {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .banner__info {
+    padding: 40px 0 60px;
+  }
+  .banner__h1 {
+    font-size: 36px;
+    line-height: 52px;
+  }
+  h2 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  // instructions__attention
+
+  .instructions__attention {
+    @include column;
+  }
+  .attention__icon {
+    margin: 0 0 20px 0;
+  }
+
+  // ---
+
+  .form {
+    padding: 50px 0;
+  }
+  .reviews__wrapper {
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .gallery__link {
+    img {
+      width: 100%;
+    }
+  }
+  .svg-search {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 5px;
+  }
+
+  // warranty__icon
+
+  .warranty__icon {
+    width: 50%;
+    padding: 10px;
+
+    img {
+      width: auto;
+      height: 100%;
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .contacts__list {
+    &:not(.footer__contacts) {
+      display: none;
+    }
+  }
+  .contacts__mobile {
+    @include flexbox;
+  }
+
+  // footer
+
+  .footer__wrapper {
+    @include column;
+  }
+  .footer__logo {
+    @include flexbox;
+    margin-bottom: 30px;
+
+    svg {
+      margin: 0 auto;
+    }
+  }
+  .footer__contacts {
+    .contacts__item {
+      justify-content: center;
+      padding: 0;
+    }
+  }
 }
 @media screen and (max-width: 320px) {
   // 0

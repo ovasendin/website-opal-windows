@@ -53,6 +53,88 @@ b {
   }
 }
 
+// mobile button (contact)
+
+.contacts__mobile {
+  @extend %flexbox;
+  @extend %grow;
+  justify-content: flex-end;
+  // none
+  display: none;
+}
+.contacts__button {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 30px rgba(20, 80, 102, 0.1);
+  margin: auto 0;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.svg-phone {
+  fill: $contrastBlue;
+  width: 30px;
+  height: 30px;
+  transform: scale(-1, 1);
+}
+
+// modal__contacts
+
+.modal {
+  @extend %flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+
+  &:not(.active) {
+    display: none;
+  }
+}
+.modal__wrapper {
+  position: relative;
+  padding: 40px 40px 50px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 425px;
+  width: 100%;
+  margin: auto;
+  pointer-events: all;
+  z-index: 2;
+}
+.modal__header {
+  @extend %flexbox;
+
+  h3 {
+    @extend %grow;
+    margin-bottom: 0;
+    margin: auto 0;
+  }
+}
+.modal__close {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: auto;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.svg-close {
+  fill: $fontDefault;
+  width: 20px;
+  height: 20px;
+}
+
 //////////////////////////
 // HEADER
 
@@ -81,6 +163,20 @@ b {
   @extend %grow;
   margin: auto 0;
   justify-content: center;
+
+  &.modal__list {
+    @extend %column;
+    justify-content: flex-start;
+    padding-top: 30px;
+
+    .contacts__item {
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .footer__contacts {
   &.contacts__list {
@@ -101,6 +197,7 @@ b {
   padding: 0 25px;
 }
 .contacts__name {
+  line-height: 20px;
   margin: auto 10px auto 0;
 }
 .contacts__link {
@@ -250,7 +347,7 @@ b {
 .svg-search {
   position: absolute;
   right: 20px;
-  bottom: 10px;
+  top: 260px;
 
   fill: #fff;
   width: 20px;
@@ -460,12 +557,11 @@ b {
   img {
     pointer-events: none;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
-
 
 //////////////////////////
 // REVIEWS
@@ -479,21 +575,66 @@ b {
   @extend %flexbox;
   background-color: $bgBlueLight;
   border: 1px solid $borderBlueLight;
-  padding: 45px 50px;
+  padding: 60px 30px 70px;
   border-radius: 10px;
   margin-top: 10px;
 }
 .reviews__item {
+  @extend %flexbox;
+  @extend %column;
   text-align: center;
+  width: 25%;
+
+  svg {
+    width: 160px;
+    height: 60px;
+    margin: 0 auto;
+
+    &.svg-bbb {
+      height: 55px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
 }
 .reviews__rating {
+  @extend %flexbox;
   color: #5b89a4;
-  font-size: 90px;
-  line-height: 90px;
+  font-size: 85px;
+  line-height: 80px;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin: 0 auto 25px;
 }
 
+//////////////////////////
+// BRANDS
+
+.brands__wrapper {
+  margin-bottom: 80px;
+}
+.brands__list {
+  @extend %flexbox;
+  justify-content: space-between;
+}
+.brand__item {
+  @extend %flexbox;
+  width: 32%;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 50px rgba(51, 107, 140, 0.07);
+  margin: auto;
+
+  img {
+    margin: auto;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
 
 //////////////////////////
 // FOOTER

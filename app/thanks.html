@@ -37,7 +37,13 @@
             <!-- contacts -->
             <div class="contacts">
               <!-- mobile contacts -->
-              <!-- here -->
+              <div class="contacts__mobile">
+                <button id="mobile__button" class="contacts__button" type="button">
+                  <svg class="svg-phone" role="img" title="Call Us">
+                    <use xlink:href="files/images/sprite.svg#phone"></use>
+                  </svg>
+                </button>
+              </div>
 
               <!-- contacts__list -->
               <ul class="contacts__list">
@@ -145,17 +151,19 @@
       <section class="brands">
         <div class="container">
 
-          <h3>Brands We Work With</h3>
+          <div class="brands__wrapper">
+            <h3>Brands We Work With</h3>
 
-          <div class="brands__list">
-            <div class="brand__item">
-              <img class="brand__img" src="./files/images/brands/kolbe.png" alt="">
-            </div>
-            <div class="brand__item">
-              <img class="brand__img" src="./files/images/brands/provia.png" alt="">
-            </div>
-            <div class="brand__item">
-              <img class="brand__img" src="./files/images/brands/andersen.png" alt="">
+            <div class="brands__list">
+              <div class="brand__item">
+                <img class="brand__img" src="./files/images/brands/kolbe.png" alt="">
+              </div>
+              <div class="brand__item">
+                <img class="brand__img" src="./files/images/brands/provia.png" alt="">
+              </div>
+              <div class="brand__item">
+                <img class="brand__img" src="./files/images/brands/andersen.png" alt="">
+              </div>
             </div>
           </div>
 
@@ -167,33 +175,65 @@
       <footer class="footer">
         <div class="container">
 
-          <div class="logo footer__logo">
-            <svg class="svg-logo" role="img" title="OPAL logotype">
-              <use xlink:href="files/images/sprite.svg#logo"></use>
-            </svg>
-          </div>
-
-          <div class="contacts footer__contacts">
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <span class="contacts__name">Naperville:</span>
-                <a href="" class="contacts__link">630-355-6557</a>
-              </li>
-              <li class="contacts__item">
-                <span class="contacts__name">Des Plaines:</span>
-                <a href="" class="contacts__link">847-380-8868</a>
-              </li>
-              <li class="contacts__item">
-                <a href="" class="contacts__link">info@opalenterprises.net</a>
-              </li>
-              <li class="contacts__item">
-                <a href="" class="contacts__link">Privacy Policy</a>
-              </li>
-            </ul>
+          <div class="footer__wrapper">
+            <div class="logo footer__logo">
+              <svg class="svg-logo" role="img" title="OPAL logotype">
+                <use xlink:href="files/images/sprite.svg#logo_white"></use>
+              </svg>
+            </div>
+  
+            <div class="contacts">
+              <ul class="contacts__list footer__contacts">
+                <li class="contacts__item">
+                  <span class="contacts__name">Naperville:</span>
+                  <a href="" class="contacts__link">630-355-6557</a>
+                </li>
+                <li class="contacts__item">
+                  <span class="contacts__name">Des Plaines:</span>
+                  <a href="" class="contacts__link">847-380-8868</a>
+                </li>
+                <li class="contacts__item">
+                  <a href="" class="contacts__link">info@opalenterprises.net</a>
+                </li>
+                <li class="contacts__item">
+                  <a href="https://www.opalexteriors.com/privacy-policy/" class="contacts__link" target="_blank">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </div>
       </footer>
+
+      <!-- Mobile__modal -->
+      <section class="modal">
+        <div class="modal__wrapper">
+          
+          <header class="modal__header">
+            <h3>Contact Us</h3>
+            <button id="modal__close" class="modal__close">
+              <svg class="svg-close" role="img" title="Close">
+                <use xlink:href="files/images/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </header>
+
+          <ul class="contacts__list modal__list">
+            <li class="contacts__item">
+              <span class="contacts__name">Naperville:</span>
+              <a href="tel:+16303556557" class="contacts__link">630-355-6557</a>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__name">Des Plaines:</span>
+              <a href="tel:+18473808868" class="contacts__link">847-380-8868</a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://opalexteriors.com" class="contacts__link" target="_blank">opalexteriors.com</a>
+            </li>
+          </ul>
+          
+        </div>
+      </section>
     </div>
     <!-- /page -->
 
