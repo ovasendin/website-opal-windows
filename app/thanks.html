@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <!--favicon-->
     <link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon" />
@@ -36,31 +36,36 @@
 
             <!-- contacts -->
             <div class="contacts">
+              <!-- mobile contacts -->
+              <!-- here -->
+
+              <!-- contacts__list -->
               <ul class="contacts__list">
                 <li class="contacts__item">
                   <span class="contacts__name">Naperville:</span>
-                  <a href="" class="contacts__link">630-355-6557</a>
+                  <a href="tel:+16303556557" class="contacts__link">630-355-6557</a>
                 </li>
                 <li class="contacts__item">
                   <span class="contacts__name">Des Plaines:</span>
-                  <a href="" class="contacts__link">847-380-8868</a>
+                  <a href="tel:+18473808868" class="contacts__link">847-380-8868</a>
                 </li>
                 <li class="contacts__item">
-                  <a href="" class="contacts__link">info@opalenterprises.net</a>
+                  <a href="https://opalexteriors.com" class="contacts__link" target="_blank">opalexteriors.com</a>
                 </li>
               </ul>
             </div>
           </header>
 
           <!-- BANNER INFO -->
-          <section class="banner__info">
+          <section class="banner__info thanks">
             <h1 class="banner__h1">Thank you for your time! <br />We know it is valuable.</h1>
+
             <div class="banner__comment">
-              <svg class="svg-mark" role="img" title="OK">
+              <svg class="svg-mark" role="img" title="Success">
                 <use xlink:href="files/images/sprite.svg#mark"></use>
               </svg>
-              <p>Your uploaded project submission was successful! 
-                A representative from Opal will be in touch with you via email as soon as possible.. </p>
+              <p class="banner__desc">Your uploaded project submission was successful! 
+                A representative from Opal will be in touch with you via email as soon as possible</p>
             </div>
           </section>
         </div>
@@ -81,15 +86,11 @@
             <!-- icons -->
             <div class="warranty__icons">
               <div class="warranty__icon">
-                <svg class="svg-lifetime" role="img" title="Lifetime Warranty">
-                  <use xlink:href="files/images/sprite.svg#lifetime"></use>
-                </svg>
+                <img src="./files/images//brands/lifetime.png" alt="Lifetime Warranty">
               </div>
 
               <div class="warranty__icon">
-                <svg class="svg-guildmaster" role="img" title="Guildmaster">
-                  <use xlink:href="files/images/sprite.svg#guildmaster"></use>
-                </svg>
+                <img src="./files/images//brands/guildmaster.png" alt="GuildMaster">
               </div>
             </div>
 
@@ -103,35 +104,37 @@
       <section class="reviews">
         <div class="container">
           
-          <h3>Our Glowing Online Reviews </h3>
+          <div class="reviews__wrapper">
+            <h3>Our Glowing Online Reviews </h3>
 
-          <div class="reviews__list">
-            <div class="reviews__item">
-              <span class="reviews__rating">4.8</span>
-              <svg class="svg-google" role="img" title="Google">
-                <use xlink:href="files/images/sprite.svg#google"></use>
-              </svg>
-            </div>
+            <div class="reviews__list">
+              <div class="reviews__item">
+                <span class="reviews__rating">4.8</span>
+                <svg class="svg-google" role="img" title="Google">
+                  <use xlink:href="files/images/sprite.svg#google"></use>
+                </svg>
+              </div>
 
-            <div class="reviews__item">
-              <span class="reviews__rating">A+</span>
-              <svg class="svg-bbb" role="img" title="BBB">
-                <use xlink:href="files/images/sprite.svg#bbb"></use>
-              </svg>
-            </div>
+              <div class="reviews__item">
+                <span class="reviews__rating">A+</span>
+                <svg class="svg-bbb" role="img" title="BBB">
+                  <use xlink:href="files/images/sprite.svg#bbb"></use>
+                </svg>
+              </div>
 
-            <div class="reviews__item">
-              <span class="reviews__rating">4.8</span>
-              <svg class="svg-facebook" role="img" title="Facebook">
-                <use xlink:href="files/images/sprite.svg#facebook"></use>
-              </svg>
-            </div>
+              <div class="reviews__item">
+                <span class="reviews__rating">4.8</span>
+                <svg class="svg-facebook" role="img" title="Facebook">
+                  <use xlink:href="files/images/sprite.svg#facebook"></use>
+                </svg>
+              </div>
 
-            <div class="reviews__item">
-              <span class="reviews__rating">4.9</span>
-              <svg class="svg-houzz" role="img" title="Houzz">
-                <use xlink:href="files/images/sprite.svg#houzz"></use>
-              </svg>
+              <div class="reviews__item">
+                <span class="reviews__rating">4.9</span>
+                <svg class="svg-houzz" role="img" title="Houzz">
+                  <use xlink:href="files/images/sprite.svg#houzz"></use>
+                </svg>
+              </div>
             </div>
           </div>
 

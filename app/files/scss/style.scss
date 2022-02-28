@@ -120,6 +120,10 @@ b {
   @extend %flexbox;
   @extend %column;
   padding: 90px 0 180px;
+
+  &.thanks {
+    padding: 120px 0;
+  }
 }
 .banner__h1 {
   color: $contrastBlue;
@@ -136,6 +140,20 @@ b {
   font-size: 20px;
   line-height: 32px;
   max-width: 680px;
+}
+.banner__comment {
+  @extend %flexbox;
+  @extend %column;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 524px;
+}
+.svg-mark {
+  fill: #36a7b0;
+  width: 30px;
+  height: 20px;
+  margin-bottom: 10px;
 }
 
 //////////////////////////
@@ -182,7 +200,7 @@ b {
   background-color: $bgBlueLight;
   border: 1px solid $borderBlueLight;
   padding: 45px 50px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 40px;
 
   &:last-child {
@@ -407,7 +425,74 @@ b {
   transform: rotate(90deg);
 }
 
+//////////////////////////
+// WARRANTY
 
+.warranty {
+  padding: 70px 0;
+  background: $orangeStart;
+  background: linear-gradient(135deg, $orangeStart 0%, $orangeStart 25%, $orangeFinish 100%);
+}
+.warranty__wrapper {
+  @extend %flexbox;
+}
+.warranty__text {
+  @extend %grow;
+  color: #fff;
+  margin: auto 0;
+
+  h2 {
+    color: #fff;
+  }
+  p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+}
+.warranty__icons {
+  @extend %flexbox;
+}
+.warranty__icon {
+  @extend %flexbox;
+  padding-left: 50px;
+
+  img {
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+}
+
+
+//////////////////////////
+// REVIEWS
+
+.reviews__wrapper {
+  @extend %flexbox;
+  @extend %column;
+  padding: 70px 0;
+}
+.reviews__list {
+  @extend %flexbox;
+  background-color: $bgBlueLight;
+  border: 1px solid $borderBlueLight;
+  padding: 45px 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.reviews__item {
+  text-align: center;
+}
+.reviews__rating {
+  color: #5b89a4;
+  font-size: 90px;
+  line-height: 90px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
 
 
 //////////////////////////
